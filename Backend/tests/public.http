@@ -1,0 +1,11 @@
+@baseUrl = http://localhost:5000/api
+
+### Public feedback
+POST {{baseUrl}}/public/feedback
+Content-Type: application/json
+
+{
+  "name": "Visitor",
+  "email": "visitor@example.com",
+  "message": "The academic portal is useful."
+}

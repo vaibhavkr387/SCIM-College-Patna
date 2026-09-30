@@ -1,0 +1,49 @@
+@baseUrl = http://localhost:5000/api
+
+### Create student
+POST {{baseUrl}}/admin/students
+Content-Type: application/json
+
+{
+  "name": "Demo Student",
+  "email": "student@example.com",
+  "phone": "9876543210",
+  "password": "StudentPass123!",
+  "course": "BCA",
+  "semester": "Sem 3"
+}
+
+### List students
+GET {{baseUrl}}/admin/students
+
+### Publish notice
+POST {{baseUrl}}/admin/notices
+Content-Type: application/json
+
+{
+  "title": "Internal Assessment",
+  "message": "Internal assessment schedule will be published shortly.",
+  "audience": "all"
+}
+
+### Create test
+POST {{baseUrl}}/admin/tests
+Content-Type: application/json
+
+{
+  "title": "DBMS Unit Test",
+  "subject": "DBMS",
+  "course": "BCA",
+  "semester": "Sem 4",
+  "durationMinutes": 20,
+  "published": false,
+  "questions": [
+    {
+      "text": "Which language is used to query relational databases?",
+      "type": "mcq",
+      "options": ["HTML", "SQL", "CSS", "JSON"],
+      "answer": "SQL",
+      "marks": 1
+    }
+  ]
+}

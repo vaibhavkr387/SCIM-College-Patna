@@ -1,0 +1,12 @@
+{
+  "name": "scim-college-portal-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "sync-env": "node scripts/sync-env.js",
+    "serve": "npm run sync-env && npx http-server public -p 3000 --cors"
+  },
+  "devDependencies": {
+    "prettier": "^3.9.9"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "scim-college-portal",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SCIM College portal — Frontend and Backend together.",
+  "scripts": {
+    "install:all": "npm install --prefix Backend && npm install --prefix Frontend",
+    "dev": "npm run dev --prefix Backend",
+    "start": "npm start --prefix Backend",
+    "frontend": "npm run serve --prefix Frontend",
+    "seed:admin": "npm run seed:admin --prefix Backend"
+  }
+}

@@ -1,0 +1,30 @@
+@baseUrl = http://localhost:5000/api
+
+### Current student
+GET {{baseUrl}}/student/me
+
+### Materials
+GET {{baseUrl}}/student/materials
+
+### Notices
+GET {{baseUrl}}/student/notices
+
+### Tests
+GET {{baseUrl}}/student/tests
+
+### Ask tutor
+POST {{baseUrl}}/student/tutor
+Content-Type: application/json
+
+{
+  "question": "Explain database normalization with a simple example."
+}
+
+### Submit a doubt
+POST {{baseUrl}}/student/doubts
+Content-Type: application/json
+
+{
+  "subject": "DBMS",
+  "question": "Can you explain the difference between 2NF and 3NF?"
+}

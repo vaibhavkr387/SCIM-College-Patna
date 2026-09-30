@@ -1,0 +1,30 @@
+@baseUrl = http://localhost:5000/api
+
+### Health
+GET {{baseUrl}}/health
+
+### Login
+POST {{baseUrl}}/auth/login
+Content-Type: application/json
+
+{
+  "email": "admin@scimpatna.org",
+  "password": "ChangeMeImmediately123!",
+  "role": "admin"
+}
+
+### Verify OTP
+POST {{baseUrl}}/auth/verify-otp
+Content-Type: application/json
+
+{
+  "userId": "PUT_USER_ID_HERE",
+  "otp": "1234567",
+  "purpose": "admin-login"
+}
+
+### Current session
+GET {{baseUrl}}/auth/me
+
+### Logout
+POST {{baseUrl}}/auth/logout
